@@ -78,14 +78,16 @@ main .spending .spending-chart {
 @media (min-width: 600px) {
   main .spending .spending-chart {
     grid-gap: 0;
+    margin-top: 25px;
   }
 }
-main .spending .spending-chart .breakdown {
+main .spending .spending-chart .day .breakdown {
   display: none;
 }
 @media (min-width: 600px) {
-  main .spending .spending-chart .breakdown {
-    opacity: 0;
+  main .spending .spending-chart .day .breakdown {
+    display: block;
+    opacity: 1;
     background: hsl(25deg, 47%, 15%);
     padding: 10px 5px;
     border-radius: 7px;
@@ -97,17 +99,22 @@ main .spending .spending-chart .breakdown {
     transition: opacity 0.2s;
   }
 }
-main .spending .spending-chart .bar {
+main .spending .spending-chart .day .bar {
   height: 150px;
   background: hsl(10deg, 79%, 65%);
   border-radius: 3px;
 }
 @media (min-width: 600px) {
-  main .spending .spending-chart .bar {
+  main .spending .spending-chart .day .bar {
     margin: 0 10px;
+    transition: opacity 0.2s;
+  }
+  main .spending .spending-chart .day .bar:hover {
+    opacity: 0.7;
+    cursor: pointer;
   }
 }
-main .spending .spending-chart p {
+main .spending .spending-chart .day p {
   color: hsl(28deg, 10%, 53%);
   text-align: center;
   font-size: 0.7rem;
