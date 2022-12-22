@@ -5,50 +5,67 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
     <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-
+    <link rel="stylesheet" href="styles.css"/>
     <title>Frontend Mentor | Expenses chart component</title>
 
 </head>
 <body>
 <main>
     <div class="balance">
-        My balance
-        $921.48
+        <div class="content">
+            <h3>My balance</h3>
+            <p>$921.48</p>
+        </div>
+        <img src="images/logo.svg" alt="company logo"/>
     </div>
     <div class="spending">
         <h2>Spending - Last 7 Days</h2>
         <div class="spending-chart">
             <div class="day">
+                <p class="breakdown">$100.00</p>
+                <div class="bar"></div>
                 <p class="day-name">mon</p>
             </div>
             <div class="day">
+                <p class="breakdown">$100.00</p>
+                <div class="bar"></div>
                 <p class="day-name">tue</p>
             </div>
             <div class="day">
+                <p class="breakdown">$100.00</p>
+                <div class="bar" style="background-color:powderblue;"></div>
                 <p class="day-name">wed</p>
             </div>
             <div class="day">
+                <p class="breakdown">$100.00</p>
+                <div class="bar"></div>
                 <p class="day-name">thu</p>
             </div>
             <div class="day">
+                <p class="breakdown">$100.00</p>
+                <div class="bar"></div>
                 <p class="day-name">fri</p>
             </div>
             <div class="day">
+                <p class="breakdown">$100.00</p>
+                <div class="bar"></div>
                 <p class="day-name">sat</p>
             </div>
             <div class="day">
+                <p class="breakdown">$100.00</p>
+                <div class="bar"></div>
                 <p class="day-name">sun</p>
             </div>
         </div>
         <hr>
         <div class="month_total">
             <div class="raw">
-                <p>Total this month</p>
-                <h1>$478.33</h1>
+                <h1>Total this month</h1>
+                <p>$478.33</p>
             </div>
             <div class="percentage">
-                <h3>+2.4%</h3>
-                <p>from last month</p>
+                <p class="raw-percentage">+2.4%</p>
+                <p class="label">from last month</p>
             </div>
         </div>
     </div>

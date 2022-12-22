@@ -1,9 +1,155 @@
-@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap");
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
   font-family: "DM Sans", sans-serif;
+}
+
+body {
+  background: hsl(27deg, 66%, 92%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+main {
+  max-width: 345px;
+  width: 100%;
+}
+@media (min-width: 600px) {
+  main {
+    max-width: 540px;
+  }
+}
+main .balance {
+  background-color: hsl(10deg, 79%, 65%);
+  padding: 25px 20px;
+  border-radius: 7px;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+@media (min-width: 600px) {
+  main .balance {
+    padding: 30px;
+    border-radius: 15px;
+  }
+}
+main .balance .content h3 {
+  font-size: 0.8rem;
+  font-weight: 400;
+  margin-bottom: 5px;
+}
+main .balance .content p {
+  font-size: 1.6rem;
+  font-weight: 500;
+}
+main .spending {
+  background: hsl(33deg, 100%, 98%);
+  border-radius: 7px;
+  padding: 30px 25px;
+}
+@media (min-width: 600px) {
+  main .spending {
+    padding: 40px;
+    border-radius: 15px;
+  }
+}
+main .spending h2 {
+  font-size: 1.45rem;
+}
+@media (min-width: 600px) {
+  main .spending h2 {
+    font-size: 2rem;
+  }
+}
+main .spending .spending-chart {
+  display: grid;
+  grid-gap: 10px;
+  align-items: end;
+  grid-template-columns: repeat(7, 1fr);
+  margin-top: 50px;
+}
+@media (min-width: 600px) {
+  main .spending .spending-chart {
+    grid-gap: 0;
+  }
+}
+main .spending .spending-chart .breakdown {
+  display: none;
+}
+@media (min-width: 600px) {
+  main .spending .spending-chart .breakdown {
+    opacity: 0;
+    background: hsl(25deg, 47%, 15%);
+    padding: 10px 5px;
+    border-radius: 7px;
+    color: white;
+    font-size: 0.8rem;
+    font-weight: 500;
+    letter-spacing: 1px;
+    margin-bottom: 5px;
+    transition: opacity 0.2s;
+  }
+}
+main .spending .spending-chart .bar {
+  height: 150px;
+  background: hsl(10deg, 79%, 65%);
+  border-radius: 3px;
+}
+@media (min-width: 600px) {
+  main .spending .spending-chart .bar {
+    margin: 0 10px;
+  }
+}
+main .spending .spending-chart p {
+  color: hsl(28deg, 10%, 53%);
+  text-align: center;
+  font-size: 0.7rem;
+  margin-top: 5px;
+}
+main .spending hr {
+  margin: 25px 0;
+  border: 1px solid hsl(27deg, 66%, 92%);
+}
+main .spending .month_total {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  color: hsl(25deg, 47%, 15%);
+}
+main .spending .month_total .raw h1 {
+  font-size: 0.9rem;
+  font-weight: 400;
+  color: hsl(28deg, 10%, 53%);
+}
+@media (min-width: 600px) {
+  main .spending .month_total .raw h1 {
+    font-size: 1.15rem;
+  }
+}
+main .spending .month_total .raw p {
+  font-size: 1.7rem;
+  font-weight: 700;
+}
+@media (min-width: 600px) {
+  main .spending .month_total .raw p {
+    font-size: 3rem;
+  }
+}
+main .spending .month_total .percentage {
+  text-align: right;
+}
+main .spending .month_total .percentage .raw-percentage {
+  font-weight: 700;
+}
+main .spending .month_total .percentage .label {
+  font-size: 0.9rem;
 }
 
 /*# sourceMappingURL=styles.css.map */
